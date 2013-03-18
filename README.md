@@ -1,7 +1,8 @@
 CCXWebview
 ==========
 
-A example code of show Webview in a cocos2d-x games on both iOS and Android platform.
+A example code of show Webview in a cocos2d-x games on both iOS and Android platform, 
+If you want to use the code please fork this project, and I am happy to know that.
 
 ##Main Info
 
@@ -28,7 +29,7 @@ Just open the project in XCode, build & run.
 3. (Optional) If you wanna use this CCXWebview in your project, please notice the `/Classes/webview/android/BFWebView.cpp` file. Please modify the `kJNIPakageName` constant varible on the top of this .cpp file.
 
 ---
-If you do know much about JNI please read articles below(all written in chinese).
+If you don't know much about JNI please read articles below(all written in chinese).
 
 [How to use JNI](http://go3k.org/?p=49)
 
