@@ -9,8 +9,6 @@ Base cocos2d-x version: 2.0.4
 
 ##Usage
 
-For more details please visite links below:
-
 ###iOS usage
 
 Just open the project in XCode, build & run.
