@@ -16,6 +16,10 @@
  http://go3k.org/?p=49
  */
 
+#warning 如果想在你的工程中嵌入，前务必修改这个包名，值为Andriod工程Main Activity的路径
+#warning If you want to use this CCXWebview in your project, please modify this packageName as your Android project.
+const char* kJNIPakageName = "org/go3k/ccxwebview/CCXWebview";
+
 ZYWebView::ZYWebView()
 {
     
@@ -37,7 +41,7 @@ void ZYWebView::showWebView(const char* url, float x, float y, float width, floa
     JniMethodInfo minfo;
     //getStaticMethodInfo 次函数返回一个bool值表示是否找到此函数
     bool isHave = JniHelper::getStaticMethodInfo(minfo,
-                                                 "com/bianfeng/puzzle/NewPuzzle",
+                                                 kJNIPakageName,
                                                  "getJavaActivity",
                                                  "()Ljava/lang/Object;");
     jobject activityObj;
@@ -47,7 +51,7 @@ void ZYWebView::showWebView(const char* url, float x, float y, float width, floa
     }
     
     //2. 查找displayWebView接口，并用jobj调用
-    isHave = JniHelper::getMethodInfo(minfo,"com/bianfeng/puzzle/NewPuzzle","displayWebView", "(IIII)V");
+    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"displayWebView", "(IIII)V");
     
     if (!isHave)
     {
@@ -64,7 +68,7 @@ void ZYWebView::showWebView(const char* url, float x, float y, float width, floa
     }
     
     //3. 查找updateURL接口，并用jobj调用
-    isHave = JniHelper::getMethodInfo(minfo,"com/bianfeng/puzzle/NewPuzzle","updateURL", "(Ljava/lang/String;)V");
+    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"updateURL", "(Ljava/lang/String;)V");
     
     if (!isHave)
     {
@@ -84,7 +88,7 @@ void ZYWebView::updateURL(const char* url)
     JniMethodInfo minfo;
     //getStaticMethodInfo 次函数返回一个bool值表示是否找到此函数
     bool isHave = JniHelper::getStaticMethodInfo(minfo,
-                                                 "com/bianfeng/puzzle/NewPuzzle",
+                                                 kJNIPakageName,
                                                  "getJavaActivity",
                                                  "()Ljava/lang/Object;");
     jobject activityObj;
@@ -94,7 +98,7 @@ void ZYWebView::updateURL(const char* url)
     }
     
     //2. 查找updateURL接口，并用jobj调用
-    isHave = JniHelper::getMethodInfo(minfo,"com/bianfeng/puzzle/NewPuzzle","updateURL", "(Ljava/lang/String;)V");
+    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"updateURL", "(Ljava/lang/String;)V");
     
     if (!isHave)
     {
@@ -114,7 +118,7 @@ void ZYWebView::removeWebView()
     JniMethodInfo minfo;
     //getStaticMethodInfo 次函数返回一个bool值表示是否找到此函数
     bool isHave = JniHelper::getStaticMethodInfo(minfo,
-                                                 "com/bianfeng/puzzle/NewPuzzle",
+                                                 kJNIPakageName,
                                                  "getJavaActivity",
                                                  "()Ljava/lang/Object;");
     jobject activityObj;
@@ -124,7 +128,7 @@ void ZYWebView::removeWebView()
     }
     
     //2. 查找updateURL接口，并用jobj调用
-    isHave = JniHelper::getMethodInfo(minfo,"com/bianfeng/puzzle/NewPuzzle","removeWebView", "()V"); 
+    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"removeWebView", "()V"); 
     
     if (!isHave)
     {
