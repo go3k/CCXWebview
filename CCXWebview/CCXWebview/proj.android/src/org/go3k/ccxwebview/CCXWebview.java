@@ -108,8 +108,8 @@ public class CCXWebview extends Cocos2dxActivity{
 
     	this.runOnUiThread(new Runnable() {
             public void run() {
-            	m_webView.destroy();
             	m_webLayout.removeView(m_webView);
+            	m_webView.destroy();
             }
         });
     }
