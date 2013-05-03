@@ -27,7 +27,7 @@ Just open the project in XCode, build & run.
 	Build and run your code.
 
 3. (Optional) If you wanna use this CCXWebview in your project, please notice the `/Classes/webview/android/BFWebView.cpp` file. Please modify the `kJNIPakageName` constant varible on the top of this .cpp file.
-> warning!!!!   `can't find jni.h`
+> warning!!!!   `can't find jni.h`  
 > Do not add the `/Classes/webview/android` folder into any platform project other than Android, this folder is for android only, if you add it into other platform there may be some build errors.  
 > check the Android.mk to learn how to handle this.
 
