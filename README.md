@@ -4,6 +4,8 @@ CCXWebview
 A example code of show Webview in a cocos2d-x games on both iOS and Android platform, 
 If you want to use the code please fork this project, and I am happy to know that.
 
+This project is under MIT License.
+
 ##Main Info
 
 Base cocos2d-x version: 2.0.4
