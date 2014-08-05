@@ -37,7 +37,7 @@ Just open the project in XCode, build & run.
 ---
 If you don't know much about JNI please read articles below(all written in chinese).
 
-[How to use JNI](http://go3k.org/?p=49)
+[How to use JNI](http://blog.go3k.org/jni0/)
 
 
-[How show webview in coco2d-x games](http://go3k.org/?p=30)
+[How show webview in coco2d-x games](http://blog.go3k.org/cocos2dx-add-webview/)
