@@ -81,3 +81,9 @@ This project is under MIT License.
 [如何使用JNI](http://blog.go3k.org/jni0/)
 
 [cocos2dx中嵌入WebView](http://blog.go3k.org/cocos2dx-add-webview/)
+
+### cocos2d-x Add a new feature of show webview...
+
+I find a new pull request of webview feature in cocos2d-x sourcecode project, the pull request content is under blow.
+
+[cocos2d-x webview pullrequest](https://github.com/cocos2d/cocos2d-x/pull/7882)
