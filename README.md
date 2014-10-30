@@ -66,7 +66,7 @@ This project is under MIT License.
 		webview->showWebView("http://go3k.org", 0, 0, 300, 300);
 		// Then a webview window will appear in your game.
 		
-		// call these method as your wish
+		// call these method as you wish
 		webview->updateURL("http://blog.go3k.org");
 		webview->removeWebView();
 
