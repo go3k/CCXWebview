@@ -39,7 +39,10 @@ This project is under MIT License.
 	
 	2. Add these codes into your Android AppActivity Class.
 
-	> Your AppActivity is located in (project directory)/proj.android/src/org/cocos2dx/cpp/AppActivity.java
+	> Your AppActivity is located in
+
+	        (project directory)/proj.android/src/org/cocos2dx/cpp/AppActivity.java
+	
 	
 			//import package
 			import org.go3k.utilities.ZYWebView;
