@@ -33,18 +33,37 @@ This project is under MIT License.
 
 	> Don't add `webview/android` folder !!! Which will result compile errors, such as 'xx symbols redefined'.
 
-3. ** For Andriod ** 
+3. ** For Android ** 
 
 	1. Copy the `org` folder in `android_package`, into `src` in your android project folder. For example: `proj.android/src/`.
 	
-	2. Add these codes into your Android Main Activity Class.
-	
+	2. Add these codes into your Android AppActivity Class.
+
 			//import package
 			import org.go3k.utilities.ZYWebView;
-			
+
 			//add code in onCreate function ---- THIS IS IMPORTANT!!!
 			ZYWebView.setActivity(this);
 			
+	> Your AppActivity is located in
+
+	        (project directory)/proj.android/src/org/cocos2dx/cpp/AppActivity.java
+	
+	> If you don't have onCreate function (v3), then add the following additional imports:
+
+			import android.app.Activity;
+			import android.os.Bundle;
+
+	> And the onCreate function itself:
+
+			public class AppActivity extends Cocos2dxActivity {
+				@Override
+    			protected void onCreate(final Bundle savedInstanceState) {
+        			super.onCreate(savedInstanceState);
+					ZYWebView.setActivity(this);
+    			}
+			}
+
 	3. Update `jni/Android.mk`, add compile files and include folder. For exmaple:
 	
 			LOCAL_SRC_FILES := hellocpp/main.cpp \
@@ -58,6 +77,7 @@ This project is under MIT License.
 
 
 4. **Show webview in cocos2d-x code**
+
 
 		#include "ZYWebView.h"
 		
